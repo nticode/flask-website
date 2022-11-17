@@ -10,7 +10,8 @@
 
     <script>
         async function toggle(state) {
-            let res = await fetch(`http://127.0.0.1:1011/api/${state}`, {method: 'POST'});
+            let host = "127.0.0.1:1011"
+            let res = await fetch(`http://${host}/api/${state}`, {method: 'POST'});
             console.log(await res.json());
         }
     </script>

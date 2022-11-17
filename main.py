@@ -14,4 +14,3 @@ def on(state):
     return {"message": f"{item} has been turned {state}"}
 
 app.run('127.0.0.1', '1011', debug=True)
-print("Online")
