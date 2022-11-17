@@ -1,0 +1,17 @@
+<html>
+    <head>
+        <title>Can be what you want</title>
+    </head>
+
+    <body>
+        <button onclick="toggle('on')">on</button>
+        <button onclick="toggle('off')">off</button>
+    </body>
+
+    <script>
+        async function toggle(state) {
+            let res = await fetch(`http://127.0.0.1:1011/api/${state}`, {method: 'POST'});
+            console.log(await res.json());
+        }
+    </script>
+</html>
